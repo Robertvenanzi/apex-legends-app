@@ -1,7 +1,7 @@
 <template>
-  <Header>
+  <header>
     <img :src="image" />
-  </Header>
+  </header>
 </template>
 
 <script>
@@ -9,10 +9,21 @@ export default {
   name: "Header",
   data() {
     return {
-      image: require("@/assests/logo.png")
+      image: require("@/assets/logo.png")
     };
   }
 };
 </script>
 
-<style></style>
+<style scoped>
+img {
+  width: 300px;
+}
+
+@media (max-width: 700px) {
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+</style>
